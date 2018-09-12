@@ -20,7 +20,7 @@ public class UserController {
 	@RequestMapping(value = "/test")
 	public String recruitdemand(final HttpServletRequest request, final HttpServletResponse response) {
 		String name = roleServer.getRoleById("1").getRoleName();
-		request.setAttribute("message", "Welcome Jack!");
+		request.setAttribute("message", "Welcome:" + name);
 		
 		return "index";
 	}
