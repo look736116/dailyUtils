@@ -14,7 +14,7 @@
       -->
     <init-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:config/springmvc-servlet.xml</param-value>
+        <param-value>classpath:config/spring-mvc.xml</param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
@@ -33,7 +33,7 @@
 	<!--2. spring context 配置文件 -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:config/app-context.xml</param-value>
+		<param-value>classpath:config/spring-mybatis.xml</param-value>
 	</context-param>
 
 	<!-- 3.spring 监听器配置 -->
@@ -52,12 +52,5 @@
 	<welcome-file-list>
 		<welcome-file>/welcome.jsp</welcome-file>
 	</welcome-file-list>
-	 <error-page>
-    <error-code>404</error-code>
-    <location>/404.jsp</location>
-  </error-page>
-  <error-page>
-    <error-code>500</error-code>
-    <location>/500.jsp</location>
-  </error-page>
+	 
 </web-app>

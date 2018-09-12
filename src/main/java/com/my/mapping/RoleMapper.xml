@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.my.dao.RoleMapper">
+	<resultMap id="roleMap" type="com.my.entity.Role">
+		<id property="roleId" column="Role_Id"  /> 
+		<result property="roleAccount" column="Role_Account" />
+		<result property="roleName" column="Role_Name"/>
+		<result property="roleSect" column="Role_Sect"  />
+		<result property="roleGrade" column="Role_Grade"  />
+		<result property="roleServer" column="Role_Server"  />
+		<result property="roleOrder" column="Role_Order"  />
+	</resultMap>	
+	
+	
+	<select id="getRoleById" parameterType="String" resultMap="roleMap">
+		select * from tbl_role where Role_Id = #{roleId}
+	</select>
+	
+	</mapper>
+	
