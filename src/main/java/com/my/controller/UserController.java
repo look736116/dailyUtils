@@ -22,7 +22,7 @@ public class UserController {
 		String name = roleServer.getRoleById("1").getRoleName();
 		request.setAttribute("message", "Welcome:" + name);
 		
-		return "index";
+		return "index1";
 	}
 	
 

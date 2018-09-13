@@ -11,6 +11,7 @@ public class TestBird {
 		AbstractApplicationContext  context = new ClassPathXmlApplicationContext("config/spring-mybatis.xml");
 		RoleServerImpl rm = (RoleServerImpl)context.getBean("roleServerImpl");
 		System.out.println(rm.getRoleById("1").getRoleName());
-				}
+	
+		}
 
 }
